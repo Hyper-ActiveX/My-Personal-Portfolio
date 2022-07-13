@@ -1,27 +1,20 @@
 import React from "react";
-// import Toggle from "../Toggle/Toggle";
+import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 const navbar = () => {
   return (
     <div className="n-wrapper" id="Navbar">
       {/* left */}
       <div className="n-left">
-        <div className="n-name">JAY</div>
-        <span>toggle</span>
-        {/* <Toggle /> */}
+        <div className="n-name">Jay Kumar</div>
+        <Toggle />
       </div>
       {/* right */}
       <div className="n-right">
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
-                <li>Home</li>
-                <li>Service</li>
-                <li>Experience</li>
-                <li>Portfolio</li>
-                <li>Testimonial</li>
-
-            {/* <li>
+            <li>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
                 Home
               </Link>
@@ -45,12 +38,12 @@ const navbar = () => {
               <Link to="testimonial" spy={true} smooth={true}>
                 Testimonial
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
-        {/* <Link to="contact" spy={true} smooth={true}> */}
+        <Link to="contact" spy={true} smooth={true}>
         <button className="button n-button">Contact</button>
-        {/* </Link> */}
+        </Link>
       </div>
     </div>
   );

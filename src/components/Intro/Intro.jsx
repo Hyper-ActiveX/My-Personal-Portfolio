@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
+import boy11 from "../../img/boy11.jpg";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
-// import FloatinDiv from "../FloatingDiv/FloatingDiv";
+import FloatinDiv from "../FloatingDiv/FloatingDiv";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
@@ -28,7 +26,7 @@ const Intro = () => {
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
+          <span>Jay Kumar Pandit</span>
           <span>
             Frontend Developer with high level of experience in web designing
             and development, producting the Quality work
@@ -47,9 +45,9 @@ const Intro = () => {
       {/* right image side */}
       <div className="i-right">
         {/* <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
-        
+        <img src={Vector2} alt="" /> */}
+        <img src={boy11} alt="" />
+        {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
           whileInView={{ left: "-24%" }}
@@ -64,18 +62,18 @@ const Intro = () => {
           transition={transition}
           className="floating-div"
         >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
+          <FloatinDiv img={crown} text1="Full Stack Web" text2="Developer" />
         </motion.div>
 
-        
+        {/* animation */}
         <motion.div
           initial={{ left: "9rem", top: "18rem" }}
           whileInView={{ left: "0rem" }}
           transition={transition}
           className="floating-div"
         >
-          
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          {/* floatinDiv mein change hy dark mode ka */}
+          <FloatinDiv img={thumbup} text1="Designer" text2="" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
@@ -88,7 +86,7 @@ const Intro = () => {
             height: "11rem",
             left: "-9rem",
           }}
-        ></div> */}
+        ></div>
       </div>
     </div>
   );
