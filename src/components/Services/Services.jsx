@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import "./Services.css";
 import Card from "../Card/Card";
 import HeartEmoji from "../../img/heartemoji.png";
-import Glasses from "../../img/glasses.png";
-import Humble from "../../img/humble.png";
+import dEmoji from "../../img/dEmoji.png"
+import idea from "../../img/idea.png"
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from './resume.pdf';
@@ -24,12 +24,14 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
-        <span>services</span>
+        <span style={{ color: darkMode ? "white" : "" }}>About Me And</span>
+        <span>My Interest</span>
         <spane>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
+          I am a student at The India Institute of Information Technology, Design & Manufacturing (IIITDM) Jabalpur.
+          <br/>
+          B Tech. Computer Science (2020 Batch)
           <br />
-          ispum is simpley dummy text of printing
+          I like to solve problems, I solved more than 500 across all the platforms(leetcode, codeforces & codechef), and I am also a full stck Developer.
         </spane>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
@@ -46,8 +48,8 @@ const Services = () => {
         >
           <Card
             emoji={HeartEmoji}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"Hobbies"}
+            detail={"Chess,Writing,Design,cricket,Travel Volunteering, community service or charity work"}
           />
         </motion.div>
         {/* second card */}
@@ -57,9 +59,9 @@ const Services = () => {
           transition={transition}
         >
           <Card
-            emoji={Glasses}
+            emoji={dEmoji}
             heading={"Developer"}
-            detail={"Html, Css, JavaScript, React, Nodejs, Express"}
+            detail={"Cpp, ,oops in java, Html, Css, JavaScript, React, Nodejs, Express"}
           />
         </motion.div>
         {/* 3rd */}
@@ -69,10 +71,10 @@ const Services = () => {
           transition={transition}
         >
           <Card
-            emoji={Humble}
-            heading={"UI/UX"}
+            emoji={idea}
+            heading={"Problem Solving"}
             detail={
-              "Lorem ispum dummy text are usually use in section where we need some random text"
+              "Data Structure and Algorithms"
             }
             color="rgba(252, 166, 31, 0.45)"
           />

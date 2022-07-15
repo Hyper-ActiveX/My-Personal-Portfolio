@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Intro.css";
 import boy11 from "../../img/boy11.jpg";
-import glassesimoji from "../../img/glassesimoji.png";
+import welcome from "../../img/welcome.gif";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
 import FloatinDiv from "../FloatingDiv/FloatingDiv";
@@ -28,8 +28,8 @@ const Intro = () => {
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Jay Kumar Pandit</span>
           <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+            Full stack Developer with high level of experience in web designing
+            and problems solving, producting the Quality work
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
@@ -52,7 +52,7 @@ const Intro = () => {
           initial={{ left: "-36%" }}
           whileInView={{ left: "-24%" }}
           transition={transition}
-          src={glassesimoji}
+          src={welcome}
           alt=""
         />
 
@@ -62,7 +62,7 @@ const Intro = () => {
           transition={transition}
           className="floating-div"
         >
-          <FloatinDiv img={crown} text1="Full Stack Web" text2="Developer" />
+          <FloatinDiv img={crown} text1="Full Stack " text2="Developer" />
         </motion.div>
 
         {/* animation */}
@@ -73,7 +73,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Designer" text2="" />
+          <FloatinDiv img={thumbup} text1="Problem Solver" text2="" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
