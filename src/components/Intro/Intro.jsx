@@ -37,9 +37,9 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+         <a href="https://github.com/Hyper-ActiveX"><img src={Github} alt="" /></a> 
+          <a href="https://www.linkedin.com/in/jay-kumar-pandit-8a74ab200/"><img src={LinkedIn} alt="" /></a>
+          <a href="https://www.instagram.com/_hyper_jay/"><img src={Instagram} alt="" /></a>
         </div>
       </div>
       {/* right image side */}

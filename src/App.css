@@ -1,13 +1,17 @@
 :root
 {
-  --yellow: #380eb6;
-    --orange : #6a1dad;
+  /* --yellow: #380eb6; */
+    --lightblue: #380eb6;
+    /* --orange : #6a1dad; */
+    --lightpurple: #6a1dad;
     --black : #242D49;
     --gray : #788097;
     --blueCard : #DDF8FE;
-    --purple: rgb(238 210 255);
+    /* --purple: rgb(238 210 255); */
+    --aqua: rgb(238 210 255);
     --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
-    --orangeCard: rgba(29, 31, 151, 0.45);
+    /* --orangeCard: rgba(29, 31, 151, 0.45); */
+    --purpleCard: rgba(29, 31, 151, 0.45);
     --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 }
 
@@ -28,10 +32,11 @@
   }
   
   .button:hover {
-    background: white;
+    background: rgb(144, 132, 210);
     cursor: pointer;
-    border: 1px solid var(--orange);
-    color: var(--orange);
+    border: 1px solid var(--lightpurple);
+    color: var(--lightpurple);
+    padding: 13px 28px 13px 28px;
   }
   @media screen and (max-width: 480px) {
     .App {

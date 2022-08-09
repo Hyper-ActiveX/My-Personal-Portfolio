@@ -6,7 +6,7 @@ import dEmoji from "../../img/dEmoji.png"
 import idea from "../../img/idea.png"
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+
 
 const Services = () => {
   // context
@@ -33,7 +33,7 @@ const Services = () => {
           <br />
           I like to solve problems, I solved more than 500 across all the platforms(leetcode, codeforces & codechef), and I am also a full stck Developer.
         </spane>
-        <a href={Resume} download>
+        <a href="https://drive.google.com/file/d/12xN8bL9wBHawyqEQqqsTd3ttXSVpM4RP/view?usp=sharing" download>
           <button className="button s-button">Download CV</button>
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>

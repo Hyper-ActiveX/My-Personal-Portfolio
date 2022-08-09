@@ -35,7 +35,7 @@
 }
 
 .n-list > ul :hover {
-  color: var(--orange);
+  color: var(--lightblue);
   cursor: pointer;
 }
 
