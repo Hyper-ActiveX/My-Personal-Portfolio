@@ -2,17 +2,24 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const form = useRef();
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(form.current);
     emailjs
       .sendForm(
-        "service_9l8sosh",
+        "service_jl3z0oi",
         "template_zzk8k7e",
         form.current,
         "-UmCYMD-F9aiA0mKC"
@@ -21,7 +28,11 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           setDone(true);
-          form.reset();
+          setFormData({
+            name: "",
+            email: "",
+            message: ""
+          });
         },
         (error) => {
           console.log(error.text);
@@ -29,13 +40,20 @@ const Contact = () => {
       );
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(e.target.value);
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
   return (
     <div className="contact-form" id="contact">
-      {/* left side copy and paste from work section */}
       <div className="w-left">
         <div className="awesome">
-          {/* darkMode */}
-          <span style={{color: darkMode?'white': ''}}>Get in Touch</span>
+          <span style={{ color: darkMode ? 'white' : '' }}>Get in Touch</span>
           <span>Contact me</span>
           <div
             className="blur s-blur1"
@@ -43,13 +61,32 @@ const Contact = () => {
           ></div>
         </div>
       </div>
-      {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="from_name" className="user"  placeholder="Name"/>
-          <input type="email" name="email_id" className="user" placeholder="Email"/>
-          <textarea name="message" className="user" placeholder="Message"/>
-          <input type="submit" value="Send" className="button"/>
+          <input
+            type="text"
+            name="name"
+            className="user"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            className="user"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            className="user"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+          <input type="submit" value="Send" className="button" />
           <span>{done && "Thanks for Contacting me"}</span>
           <div
             className="blur c-blur1"

@@ -28,7 +28,7 @@ const Intro = () => {
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Jay Kumar Pandit</span>
           <span>
-            Full stack Developer with high level of experience in web designing
+            Full stack Developer with basic level of experience in web designing
             and problems solving, producting the Quality work
           </span>
         </div>
